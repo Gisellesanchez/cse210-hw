@@ -22,7 +22,7 @@ class Program
     //    {
     //     Console.WriteLine(i);
     //    }
-        
+    //Random Number Generator
     //   Random randomGenerator = new Random();
     //   int number = randomGenerator.Next(1, 11);
     //     Console.WriteLine("Guess a number between 1 and 10");
@@ -54,14 +54,35 @@ class Program
         //     Console.WriteLine("You guessed it!");
         // }
    
-//Loop with Magic Number
-        Random randomGenerator = new Random();
-        int magicNumber = randomGenerator.Next(1, 11);
+//Loop with Magic Number 1-10
+        // Random randomGenerator = new Random();
+        // int magicNumber = randomGenerator.Next(1, 11);
+        // int guess = 0;
+
+        // while (guess != magicNumber)
+        // {
+        //     Console.WriteLine("Guess a number between 1 and 10");
+        //     guess = int.Parse(Console.ReadLine());
+
+        //     if (guess < magicNumber)
+        //     {
+        //         Console.WriteLine("Too low!");
+        //     }
+        //     else if (guess > magicNumber)
+        //     {
+        //         Console.WriteLine("Too high!");
+        //     }
+        // }
+        // Console.WriteLine("You guessed it!");
+ 
+/// Random Number Generator  1-100
+   Random randomGenerator = new Random();
+        int magicNumber = randomGenerator.Next(1, 101);
         int guess = 0;
 
         while (guess != magicNumber)
         {
-            Console.WriteLine("Guess a number between 1 and 10");
+            Console.WriteLine("Guess a number between 1 and 100");
             guess = int.Parse(Console.ReadLine());
 
             if (guess < magicNumber)
@@ -74,9 +95,6 @@ class Program
             }
         }
         Console.WriteLine("You guessed it!");
- 
-
-
 
     }
 }
