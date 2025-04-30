@@ -96,7 +96,28 @@ class Program
 //         }
 //         Console.WriteLine("You guessed it!");
 
+//Stretch Challenge
+        Random randomGenerator = new Random();
+        int magicNumber = randomGenerator.Next(1, 101);
+        int guess = 0;
+        int guesses = 0;
 
+        while (guess != magicNumber)
+        {
+            Console.WriteLine("Guess a number between 1 and 100");
+            guess = int.Parse(Console.ReadLine());
+            guesses++;
+
+            if (guess < magicNumber)
+            {
+                Console.WriteLine("Too low!");
+            }
+            else if (guess > magicNumber)
+            {
+                Console.WriteLine("Too high!");
+            }
+        }
+        Console.WriteLine($"You guessed it in {guesses} tries!");
 
 
     }
