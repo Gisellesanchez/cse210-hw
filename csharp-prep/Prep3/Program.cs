@@ -118,6 +118,17 @@ class Program
             }
         }
         Console.WriteLine($"You guessed it in {guesses} tries!");
+        Console.WriteLine("Would you like to play again? (yes/no)");
+        string playAgain = Console.ReadLine();
+        if (playAgain.ToLower() == "yes")
+        {
+            Main(args); // Restart the game
+        }
+        else
+        {
+            Console.WriteLine("Thanks for playing!");
+        }
+        // Console.WriteLine("You guessed it!");
 
 
     }
