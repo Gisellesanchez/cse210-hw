@@ -127,10 +127,10 @@ class Program
         else
         {
             Console.WriteLine("Thanks for playing!");
-        }
-        // Console.WriteLine("You guessed it!");
 
 
     }
+    }
 }
+
     
