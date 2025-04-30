@@ -31,27 +31,51 @@ class Program
     
     //     if (guess == number
     
+//Magic Number Guess Generator
 
-        Console.WriteLine("What is the magic number? ");
-        string magicNumber = Console.ReadLine();
-        int magicNumberInt = int.Parse(magicNumber);
-        Console.WriteLine("What is your guess? ");
-        string guessString = Console.ReadLine();
-        int guess = int.Parse(guessString);
 
-        if (guess < magicNumberInt)
-        {
-            Console.WriteLine("Too low!");
-        }
-        else if (guess > magicNumberInt)
-        {
-            Console.WriteLine("Too high!");
-        }
-        else
-        {
-            Console.WriteLine("You guessed it!");
-        }
+        // Console.WriteLine("What is the magic number? ");
+        // string magicNumber = Console.ReadLine();
+        // int magicNumberInt = int.Parse(magicNumber);
+        // Console.WriteLine("What is your guess? ");
+        // string guessString = Console.ReadLine();
+        // int guess = int.Parse(guessString);
+
+        // if (guess < magicNumberInt)
+        // {
+        //     Console.WriteLine("Too low!");
+        // }
+        // else if (guess > magicNumberInt)
+        // {
+        //     Console.WriteLine("Too high!");
+        // }
+        // else
+        // {
+        //     Console.WriteLine("You guessed it!");
+        // }
    
+//Loop with Magic Number
+        Random randomGenerator = new Random();
+        int magicNumber = randomGenerator.Next(1, 11);
+        int guess = 0;
+
+        while (guess != magicNumber)
+        {
+            Console.WriteLine("Guess a number between 1 and 10");
+            guess = int.Parse(Console.ReadLine());
+
+            if (guess < magicNumber)
+            {
+                Console.WriteLine("Too low!");
+            }
+            else if (guess > magicNumber)
+            {
+                Console.WriteLine("Too high!");
+            }
+        }
+        Console.WriteLine("You guessed it!");
+ 
+
 
 
     }
