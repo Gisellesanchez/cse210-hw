@@ -53,6 +53,10 @@ class Program
 
    
     }
-    Console.WriteLine($"The sum of the numbers is: {sum}");
+
+    Console.WriteLine("The sum is: " + sum);
+    Console.WriteLine("The average is: " + (sum / numbers.Count));
+    Console.WriteLine("The largest number is: " + numbers.Max());
+    Console.WriteLine("The smallest number is: " + numbers.Min());
 }
 }
