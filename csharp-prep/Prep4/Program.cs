@@ -45,8 +45,14 @@ class Program
 
     } 
     while (input != 0);
- 
+ int sum = 0;
+   
+    foreach (int number in numbers)
+    {
+        sum += number;              
 
    
     }
+    Console.WriteLine($"The sum of the numbers is: {sum}");
+}
 }
