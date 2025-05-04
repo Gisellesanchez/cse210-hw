@@ -32,7 +32,21 @@ class Program
 
     Console.WriteLine("Enter a list of numbers, type 0 when you are finished.");
 
-  
+    do
+    {
+        Console.Write("Enter number here: ");
+        input = int.Parse(Console.ReadLine());
 
+        if (input !=0)
+
+        {
+            numbers.Add(input);
+        }
+
+    } 
+    while (input != 0);
+ 
+
+   
     }
 }
