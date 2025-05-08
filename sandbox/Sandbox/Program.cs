@@ -34,7 +34,7 @@ class Program
         Console.WriteLine("Hello Sandbox World]!");
 
         Circle myCircle = new Circle();
-        Circle myCircle2 = new Circle();
+        //Circle myCircle2 = new Circle();
         myCircle.SetRadius(10);
        // myCircle._radius = 20;
         Console.WriteLine($"{myCircle.GetRadius()}");
@@ -44,6 +44,18 @@ class Program
 
           Console.WriteLine($"The area of the circle is: {myCircle.GetArea()}");
             Console.WriteLine($"The area of the circle is: {myCircle2.GetArea()}");
+
+
+      Cylinder myCylinder = new Cylinder();
+        myCylinder.SetCircle(myCircle);
+        myCylinder.SetHeight(10);
+        Console.WriteLine($"The volume of the cylinder is: {myCylinder.GetVolume()}");
+
+        //List<int> myNumbers = new List<int>();
+        Console.WriteLine($"The volume of the cylinder is: {myCylinder.GetVolume()}");
+
+        //List<int> myNumbers = new List<int>();
+
 
 //List<int> myNumbers + new List<int>();
   //  myNumbers.Add(10);
