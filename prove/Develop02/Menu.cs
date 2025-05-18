@@ -3,30 +3,7 @@ using System.ComponentModel;
 
 class Menu
 {
-
-    public  void DisplayMenu()
-    {
-        Console.WriteLine("Please select an option:");
-        Console.WriteLine();
-        Console.WriteLine("1. Write a new journal entry");
-        Console.WriteLine("2. Display the Journal");
-        Console.WriteLine("3. Save the journal to file");
-        Console.WriteLine("4. Load the journal from the file");
-        Console.WriteLine("5. Quit");
-
-        
-    }
-
-    public string GetInput()
-    {
-        Console.Write("Enter your choice: ");
-        return Console.ReadLine();
-
-    }
-
     public void DisplayTitle()
-
-
     {
         Console.WriteLine();
         Console.WriteLine("------------------------------------------------");
@@ -41,4 +18,27 @@ class Menu
         Console.WriteLine();
 
     }
+    public void DisplayMenu()
+    {
+        Console.WriteLine("Please select an option:");
+        Console.WriteLine();
+        Console.WriteLine("1. Write a new journal entry");
+        Console.WriteLine("2. Display the Journal");
+        Console.WriteLine("3. Save the journal to file");
+        Console.WriteLine("4. Load the journal from the file");
+        Console.WriteLine("5. Quit");
+        Console.WriteLine();
+
+        
+    }
+
+    public string GetInput()
+    {
+        Console.Write("Enter your choice: ");
+        Console.WriteLine();
+        return Console.ReadLine();
+
+    }
+
+   
 }
