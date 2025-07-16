@@ -1,7 +1,4 @@
 using System;
-
-
-using System;
 using System.Diagnostics.Tracing;
 using System.IO.Compression;
 
