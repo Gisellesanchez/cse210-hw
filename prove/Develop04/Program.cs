@@ -6,12 +6,18 @@ using System.Threading;
 
 class Program
 {
+      static Dictionary<string, int> _activityCount = new Dictionary<string, int>
+    {
+        {"Breathing", 0},
+        {"Reflection", 0},
+        {"Listing", 0}
+    };
     static void Main(string[] args)
     {
         {
             while (true)
             {
-               Console.Clear();
+                Console.Clear();
                 Console.WriteLine("Welcome to the Mindful Prove Program!");
                 Console.WriteLine("Please select an activity:");
                 Console.WriteLine("1. Breathing Activity");
@@ -20,33 +26,49 @@ class Program
                 Console.WriteLine("4. Exit");
 
                 string choice = Console.ReadLine();
-                Console.Clear();
 
-                switch (choice)
+                Activity activity = choice switch
                 {
-                    case "1":
-                        Breathing Breathing = new Breathing();
-                        break;
+                    "1" => new BreathingActivity(),
+                    "2" => new Reflection(),
+                    "3" => new Listing(),
+                    _ => null
+                };
+                if (activity == null && choice != "4")
+                {
+                    Console.WriteLine("Invalid choice, please try again.");
+                    Thread.Sleep(2000); // Simulate a short delay before showing the menu again
+                    continue;
+                }
+                if (activity != null)
+                {
+                    _activityCount[activity.GetType().Name.Replace("Activity", "")] ++;
+                    activity.Start();
 
-                    case "2":
-                        Reflection reflectionActivity = new Reflection();
-                        break;
+                }
+                else if (choice == "4")
+                {
+                    Console.WriteLine("\nSession Summary:");
+                    foreach (var kvp in _activityCount)
+                    {
+                        Console.WriteLine($"{kvp.Key} Activity Count: {kvp.Value}");
+                    }
+                    Console.WriteLine("Thank you for participating in the Mindful Prove Program!");
+                    Console.WriteLine("Press any key to exit...");
+                    Console.ReadKey();
+                    Console.ReadLine();
+              
+                }
+                else
+                {
+                    Console.WriteLine("Invalid choice, please try again.");
+                    Thread.Sleep(2000);
+                }
 
-                    case "3":
-                        Listing listingActivity = new Listing();
-                        break;
-                        
-                    case "4":
-                        return;
-                    default:
-                        Console.WriteLine("Invalid choice, please try again.");
-                        Console.WriteLine("Press any key to continue...");
-                        Console.ReadKey();
-                        continue;
 
-                } 
             }
+            ;
         }
-      
     }
-}
+
+    }
